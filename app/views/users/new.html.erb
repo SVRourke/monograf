@@ -1,0 +1,22 @@
+<h1>Join MonoGraf</h1>
+
+<%= form_with(model: @user, url: user_path) do |f| %>
+    <%= f.fields_for :user do |i| %>
+        <%= i.label :name, "name:" %><br>
+        <%= i.text_field :name %><br>
+
+
+        <%= i.label :email, "email:" %><br>
+        <%= i.email_field :email %><br>
+
+
+        <%= i.label :password, "choose a password:" %><br>
+        <%= i.password_field :password %><br>
+        <%= i.label :password_confirmation, "confirm password:" %><br>
+        <%= i.password_field :password_confirmation %><br>
+        
+
+
+        <%= i.submit "JOIN" %>
+    <% end %>
+<% end %>

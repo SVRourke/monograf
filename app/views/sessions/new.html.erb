@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+<%= form_with(url: session_path) do |f| %>
+    <%= f.fields_for :user do |i| %>
+        <%= i.label :email, "email:" %><br>
+        <%= i.email_field :email %><br>
+
+        <%= i.label :password, "password:" %><br>
+        <%= i.password_field :password %><br>
+        
+        <%= i.submit "login" %>
+    <% end %>
+<% end %>

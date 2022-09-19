@@ -70,3 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "bcrypt", "~> 3.1"
+
+gem "byebug", "~> 11.1"
+
+gem "pry-rails", "~> 0.3.9"
+
+gem "pry-nav", "~> 1.0"

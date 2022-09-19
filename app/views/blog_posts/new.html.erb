@@ -1,0 +1,27 @@
+<%= javascript_include_tag( 'blog_post_page' ) %>
+
+<h5>New Post</h5>
+
+<%= form_for(@post) do |p| %>
+    <%= p.text_field :title, placeholder: "A blog post about ..." %><br>
+    <%= p.text_field :sub_title, placeholder: "more about the post..." %><br>
+
+
+    <%# ! hidden_field for stringified generated content %>
+    <%# ! div for holding generated content %>
+    <%# ! menu for adding elements %>
+
+    <div id="content_builder" style="border:solid black 2px;padding:1rem 2rem">
+        <div id="content_container">
+        </div>
+
+        <div id="content_menu">
+            <%# add paragraph %>
+            <button id="add_paragraph">+P</button>
+            <%# add image %>
+            <button id="add_image">+I</button>
+        </div>
+    </div>
+    <%# ! Replace newlines with linebreaks <br> %>
+    <%= p.submit :publish %>
+<% end %>

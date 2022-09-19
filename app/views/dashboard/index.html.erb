@@ -1,0 +1,16 @@
+<h1>Hello <%= @user.name %></h1>
+
+<h4>posts:</h4>
+<% @posts.each do |post| %>
+<%# 
+    ! todo: Make Partial
+    ! todo: make link to view / edit post
+    ! todo: show analytics
+%>
+<% binding.pry %>
+    <%= link_to blog_post_path(post.id) do %>
+    <div>
+        <p><%= post.title %></p>
+    </div>
+    <% end %>
+<% end %>
